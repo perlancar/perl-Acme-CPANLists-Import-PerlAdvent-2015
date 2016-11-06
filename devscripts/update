@@ -88,6 +88,7 @@ gen_curried_sub(
                 name => "2015_12_14",
                 url => "http://perladvent.org/2015/2015-12-04.html",
                 summary => "Modules mentioned in Perl Advent Calendar 2015 (day 14)",
+                add_modules => ['Acme::MetaSyntactic'],
             },
             {
                 name => "2015_12_15",
@@ -108,6 +109,7 @@ gen_curried_sub(
                 name => "2015_12_18",
                 url => "http://perladvent.org/2015/2015-12-18.html",
                 summary => "Modules mentioned in Perl Advent Calendar 2015 (day 18)",
+                add_modules => ['Sereal'],
             },
             {
                 name => "2015_12_19",

@@ -1,0 +1,158 @@
+#!/usr/bin/env perl
+
+use 5.010;
+use strict;
+use warnings;
+use FindBin '$Bin';
+
+use App::CreateAcmeCPANListsImportModules;
+use Perinci::Sub::Util qw(gen_curried_sub);
+use Perinci::CmdLine::Any;
+
+gen_curried_sub(
+    'App::CreateAcmeCPANListsImportModules::create_acme_cpanlists_import_modules',
+    {
+        modules => [
+            {
+                name => '2015',
+                url => "http://perladvent.org/2015/",
+                extract_urls => [map {"http://perladvent.org/2015/2015-12-$_.html"} "01".."25"],
+                summary => 'Modules mentioned in Perl Advent Calendar 2015',
+            },
+            {
+                name => "2015_12_01",
+                url => "http://perladvent.org/2015/2015-12-01.html",
+                summary => "Modules mentioned in Perl Advent Calendar 2015 (day 01)",
+            },
+            {
+                name => "2015_12_02",
+                url => "http://perladvent.org/2015/2015-12-02.html",
+                summary => "Modules mentioned in Perl Advent Calendar 2015 (day 02)",
+            },
+            {
+                name => "2015_12_03",
+                url => "http://perladvent.org/2015/2015-12-03.html",
+                summary => "Modules mentioned in Perl Advent Calendar 2015 (day 03)",
+            },
+            {
+                name => "2015_12_04",
+                url => "http://perladvent.org/2015/2015-12-04.html",
+                summary => "Modules mentioned in Perl Advent Calendar 2015 (day 04)",
+            },
+            {
+                name => "2015_12_05",
+                url => "http://perladvent.org/2015/2015-12-05.html",
+                summary => "Modules mentioned in Perl Advent Calendar 2015 (day 05)",
+            },
+            {
+                name => "2015_12_06",
+                url => "http://perladvent.org/2015/2015-12-06.html",
+                summary => "Modules mentioned in Perl Advent Calendar 2015 (day 06)",
+            },
+            {
+                name => "2015_12_07",
+                url => "http://perladvent.org/2015/2015-12-07.html",
+                summary => "Modules mentioned in Perl Advent Calendar 2015 (day 07)",
+            },
+            {
+                name => "2015_12_08",
+                url => "http://perladvent.org/2015/2015-12-08.html",
+                summary => "Modules mentioned in Perl Advent Calendar 2015 (day 08)",
+            },
+            {
+                name => "2015_12_09",
+                url => "http://perladvent.org/2015/2015-12-09.html",
+                summary => "Modules mentioned in Perl Advent Calendar 2015 (day 09)",
+            },
+            {
+                name => "2015_12_10",
+                url => "http://perladvent.org/2015/2015-12-10.html",
+                summary => "Modules mentioned in Perl Advent Calendar 2015 (day 10)",
+            },
+            {
+                name => "2015_12_11",
+                url => "http://perladvent.org/2015/2015-12-11.html",
+                summary => "Modules mentioned in Perl Advent Calendar 2015 (day 11)",
+            },
+            {
+                name => "2015_12_12",
+                url => "http://perladvent.org/2015/2015-12-12.html",
+                summary => "Modules mentioned in Perl Advent Calendar 2015 (day 12)",
+            },
+            {
+                name => "2015_12_13",
+                url => "http://perladvent.org/2015/2015-12-13.html",
+                summary => "Modules mentioned in Perl Advent Calendar 2015 (day 13)",
+            },
+            {
+                name => "2015_12_14",
+                url => "http://perladvent.org/2015/2015-12-04.html",
+                summary => "Modules mentioned in Perl Advent Calendar 2015 (day 14)",
+            },
+            {
+                name => "2015_12_15",
+                url => "http://perladvent.org/2015/2015-12-15.html",
+                summary => "Modules mentioned in Perl Advent Calendar 2015 (day 15)",
+            },
+            {
+                name => "2015_12_16",
+                url => "http://perladvent.org/2015/2015-12-16.html",
+                summary => "Modules mentioned in Perl Advent Calendar 2015 (day 16)",
+            },
+            {
+                name => "2015_12_17",
+                url => "http://perladvent.org/2015/2015-12-17.html",
+                summary => "Modules mentioned in Perl Advent Calendar 2015 (day 17)",
+            },
+            {
+                name => "2015_12_18",
+                url => "http://perladvent.org/2015/2015-12-18.html",
+                summary => "Modules mentioned in Perl Advent Calendar 2015 (day 18)",
+            },
+            {
+                name => "2015_12_19",
+                url => "http://perladvent.org/2015/2015-12-19.html",
+                summary => "Modules mentioned in Perl Advent Calendar 2015 (day 19)",
+            },
+            {
+                name => "2015_12_20",
+                url => "http://perladvent.org/2015/2015-12-20.html",
+                summary => "Modules mentioned in Perl Advent Calendar 2015 (day 20)",
+            },
+            {
+                name => "2015_12_21",
+                url => "http://perladvent.org/2015/2015-12-21.html",
+                summary => "Modules mentioned in Perl Advent Calendar 2015 (day 21)",
+            },
+            {
+                name => "2015_12_22",
+                url => "http://perladvent.org/2015/2015-12-22.html",
+                summary => "Modules mentioned in Perl Advent Calendar 2015 (day 22)",
+            },
+            {
+                name => "2015_12_23",
+                url => "http://perladvent.org/2015/2015-12-23.html",
+                summary => "Modules mentioned in Perl Advent Calendar 2015 (day 23)",
+            },
+            {
+                name => "2015_12_24",
+                url => "http://perladvent.org/2015/2015-12-24.html",
+                summary => "Modules mentioned in Perl Advent Calendar 2015 (day 24)",
+            },
+            #{
+            #    name => "2015_12_25",
+            #    url => "http://perladvent.org/2015/2015-12-25.html",
+            #    summary => "Modules mentioned in Perl Advent Calendar 2015 (day 25)",
+            #},
+        ],
+        namespace => 'Acme::CPANLists::Import::PerlAdvent',
+        user_agent => 'Mozilla/5.0',
+        dist_dir => "$Bin/..",
+    },
+    'app',
+);
+
+Perinci::CmdLine::Any->new(
+    url => '/main/app',
+    log => 1,
+)->run;
